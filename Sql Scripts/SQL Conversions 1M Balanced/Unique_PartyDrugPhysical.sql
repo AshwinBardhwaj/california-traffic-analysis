@@ -1,0 +1,2 @@
+select distinct party_drug_physical
+from collisiontable1M

@@ -1,0 +1,2 @@
+select distinct location_type
+from collisiontable1M

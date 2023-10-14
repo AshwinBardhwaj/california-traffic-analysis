@@ -1,0 +1,2 @@
+select distinct road_condition_1
+from collisiontable1M

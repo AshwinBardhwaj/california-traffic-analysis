@@ -1,0 +1,2 @@
+select distinct financial_responsibility
+from collisiontable1M

@@ -1,0 +1,2 @@
+select distinct collision_severity
+from collisiontable1M

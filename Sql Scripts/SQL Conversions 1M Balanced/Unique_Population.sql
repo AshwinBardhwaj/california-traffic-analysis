@@ -1,0 +1,2 @@
+select distinct population_value
+from collisiontable1M

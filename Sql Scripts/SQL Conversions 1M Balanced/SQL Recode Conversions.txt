@@ -1,0 +1,59 @@
+update collisiontable10K
+set lighting1 = 5
+where lighting =  'daylight';
+
+update collisiontable10K
+set lighting1 = 4
+where lighting =  'dusk or dawn';
+
+update collisiontable10K
+set lighting1 = 3
+where lighting =  'dark with street lights';
+
+update collisiontable10K
+set lighting1 = 2
+where lighting =  'dark with street lights not functioning';
+
+update collisiontable10K
+set lighting1 = 1
+where lighting =  'dark with no street lights';
+
+select lighting, lighting1
+from collisiontable10K;
+
+select distinct lighting
+from collisiontable10K
+
+// Population
+
+update collisiontable10K
+set population = 1
+where population =  'unincorporated';
+
+update collisiontable10K
+set population = 2
+where population =  '<2500';
+
+update collisiontable10K
+set population = 3
+where population =  '2500 to 10000';
+
+update collisiontable10K
+set population = 4
+where population =  '10000 to 25000';
+
+update collisiontable10K
+set population = 5
+where population =  '25000 to 50000';
+
+update collisiontable10K
+set population = 6
+where population =  '50000 to 100000';
+
+update collisiontable10K
+set population = 7
+where population =  '100000 to 250000';
+
+update collisiontable10K
+set population = 8
+where population =  '>250000';

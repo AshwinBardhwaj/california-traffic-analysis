@@ -1,0 +1,2 @@
+select distinct alcohol_involved
+from collisiontable1M
