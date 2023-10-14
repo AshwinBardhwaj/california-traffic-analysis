@@ -1,0 +1,17 @@
+% Read the accident data from file to a matrix 
+data = readcell("ashba_LocationDataWithFactorsZipCode_Active.xlsx");
+
+%Instantiate the cluster algorithm
+dbScanCluster = DBScanCluster(data, 15, 20);
+dbScanCluster.Execute(17);
+%dbScanCluster.Plot();
+
+biggestClusterIndex = dbScanCluster.GetBiggestClusterIndex();
+biggestClusterData = dbScanCluster.GetCluster(biggestClusterIndex);
+
+indexList = biggestClusterIndex * ones(size(biggestClusterData, 1));
+%dbScanCluster.PlotClusterData(biggestClusterData, indexList);
+
+lightCondition = FactorLightCondition(biggestClusterData);
+lightCondition.UpdateFrequency();
+factorLightConditionFreq = lightCondition.FactorFreqnecy();

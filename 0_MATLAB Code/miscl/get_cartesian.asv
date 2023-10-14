@@ -1,0 +1,9 @@
+function [xPos,yPos] = get_cartesian(latlongCoord)
+%UNTITLED5 Summary of this function goes here
+%   Detailed explanation goes here
+R = 3958.8;
+latlongCoord = deg2rad(latitude);
+radLong = deg2rad(longitude);
+xPos = R * cos(latlongCoord) * cos(radLong);
+yPos = R * cos(latlongCoord) * sin(radLong);
+end
